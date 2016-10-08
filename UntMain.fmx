@@ -1,0 +1,143 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 310
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = VertCenter
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 290.000000000000000000
+    Size.Height = 321.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object CalloutPanel1: TCalloutPanel
+      Align = VertCenter
+      Padding.Top = 11.000000000000000000
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 88.000000000000000000
+      Size.Width = 270.000000000000000000
+      Size.Height = 153.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      CalloutWidth = 23.000000000000000000
+      CalloutLength = 11.000000000000000000
+      CalloutPosition = Bottom
+      object Label1: TLabel
+        Position.X = 8.000000000000000000
+        Position.Y = 24.000000000000000000
+        Text = 'Usuario'
+      end
+      object EdtUsuario: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 8.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 169.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label2: TLabel
+        Position.X = 8.000000000000000000
+        Position.Y = 72.000000000000000000
+        Text = 'Senha'
+      end
+      object EdtSenha: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Password = True
+        Position.X = 8.000000000000000000
+        Position.Y = 96.000000000000000000
+        Size.Width = 169.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Panel2: TPanel
+      Align = Top
+      Size.Width = 290.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label3: TLabel
+        Align = Left
+        Margins.Left = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Size.Width = 201.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'N'#227'o tenho conta, cadastre-me'
+      end
+      object swtNovaConta: TSwitch
+        Align = Right
+        IsChecked = False
+        Margins.Right = 10.000000000000000000
+        Position.X = 202.000000000000000000
+        Size.Width = 78.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnSwitch = swtNovaContaSwitch
+      end
+    end
+    object btnLogin: TButton
+      Align = MostBottom
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 288.000000000000000000
+      Size.Width = 270.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Entrar'
+    end
+  end
+  object Panel3: TPanel
+    Align = Top
+    Size.Width = 310.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label4: TLabel
+      Align = Client
+      StyledSettings = [Family]
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 290.000000000000000000
+      Size.Height = 61.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.Font.Style = [fsBold]
+      TextSettings.FontColor = claGreen
+      TextSettings.HorzAlign = Center
+      Text = 'Osque Login'
+    end
+  end
+  object PPUsuarios: TParseProvider
+    ApiVersion = '1'
+    AndroidPush.InstallationID = 'FDDFE617-6E42-40FC-8541-D9DFA23B0620'
+    Left = 64
+    Top = 56
+  end
+  object bkendUsuarios: TBackendUsers
+    Provider = PPUsuarios
+    Left = 160
+    Top = 64
+  end
+end
